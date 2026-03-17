@@ -40,7 +40,7 @@ cd GigaAM
 pip install -e .
 
 # (optionally) Verify the installation:
-pip install -e .[tests]
+pip install -e ".[tests]"
 pytest -v tests/test_loading.py -m partial  # or `-m full` to test all models
 ```
 
@@ -79,9 +79,9 @@ For detailed results, see [here](./evaluation.md).
 * Accept the conditions to access [pyannote/segmentation-3.0](https://huggingface.co/pyannote/segmentation-3.0) files and content
 
 ```bash
-pip install -e .[longform]
+pip install -e ".[longform]"
 # optionally run longform testing
-pip install -e .[tests]
+pip install -e ".[tests]"
 HF_TOKEN=<your hf token> pytest -v tests/test_longform.py
 ```
 </details>
@@ -177,6 +177,7 @@ If you use GigaAM in your research, please cite our paper:
 ## Links
 
 * [[arxiv] GigaAM: Efficient Self-Supervised Learner for Speech Recognition](https://arxiv.org/abs/2506.01192)
+* [[habr] GigaAM-v3: открытая SOTA-модель распознавания речи на русском](https://habr.com/ru/companies/sberdevices/articles/973160/)
 * [[habr] GigaAM: класс открытых моделей для обработки звучащей речи](https://habr.com/ru/companies/sberdevices/articles/805569)
 * [[youtube] Как научить LLM слышать: GigaAM 🤝 GigaChat Audio](https://www.youtube.com/watch?v=O7NSH2SAwRc)
 * [[youtube] GigaAM: Семейство акустических моделей для русского языка](https://youtu.be/PvZuTUnZa2Q?t=26442)
